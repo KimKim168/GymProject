@@ -15,10 +15,72 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Moul&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Siemreap&display=swap"
             rel="stylesheet"
         />
         <style>
+            @font-face {
+                font-family: "Costum1";
+                src: url("/font/raleway-5/Raleway-Black.ttf") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum2";
+                src: url("/font/raleway-5/Raleway-BlackItalic.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum3";
+                src: url("/font/raleway-5/Raleway-Bold.ttf") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum4";
+                src: url("/font/raleway-5/Raleway-Medium.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum5";
+                src: url("/font/raleway-5/Raleway-ExtraBold.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum6";
+                src: url("/font/raleway-5/Raleway-ExtraBoldItalic.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum7";
+                src: url("/font/raleway-5/Raleway-ExtraLight.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum8";
+                src: url("/font/raleway-5/Raleway-SemiBold.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum9";
+                src: url("/font/raleway-5/Raleway-Italic.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+
             .light-color-gradient {
                 position: relative;
                 background-color: #f5f6f7;
@@ -33,50 +95,97 @@
                         rgba(239, 152, 207, 0) 36%
                     );
             }
+
             .gradient-bg {
                 background: linear-gradient(to right, #06b6d4, #3b82f6);
             }
+
             .shadow-custom {
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
                     0 2px 4px rgba(0, 0, 0, 0.06);
             }
         </style>
+
+        <script>
+            tailwind.config = {
+                darkMode: "class", // Enables dark mode based on class
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: "#da373d",
+                            primary: "#15803d",
+                            warning: "#fab105",
+                            warningHover: "#ffb915",
+                        },
+                    },
+                    fontFamily: {
+                        koluen: ["Koulen"],
+                        costum1: ["Costum1", "sans-serif"],
+                        costum2: ["Costum2", "sans-serif"],
+                        costum3: ["Costum3", "sans-serif"],
+                        costum4: ["Costum4", "sans-serif"],
+                        costum5: ["Costum5", "sans-serif"],
+                        costum6: ["Costum6", "sans-serif"],
+                        costum7: ["Costum7", "sans-serif"],
+                        costum8: ["Costum8", "sans-serif"],
+                        costum9: ["Costum9", "sans-serif"],
+                    },
+                },
+            };
+        </script>
     </head>
-    <body class="bg-[#151516] text-white">
+    <body
+        style="
+            background-image: url('../img/Home Page.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-position-x: center;
+        "
+        class="text-white"
+    >
         <!-- Start Navbar -->
         <nav class="bg-[#0b0b0c] text-white fixed w-full z-40 top-0 start-0">
             <div
-                class="max-w-screen-xl flex flex-wrap items-center border-b border-gray-400 justify-between mx-auto p-4"
+                class="max-w-screen-xl flex flex-wrap justify-center items-center md:justify-between mx-auto p-4 border-b border-gray-400"
             >
+                <!-- Left Side - Contact Info -->
                 <div
-                    href="#"
-                    class="flex items-center space-x-3 rtl:space-x-reverse"
+                    class="flex flex-col-reverse gap-5 items-center space-x-3 md:flex-row rtl:space-x-reverse"
                 >
-                    <!--Start number phone -->
-                    <div class="flex items-center justify-center space-x-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="19"
-                            height="19"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="#11ace3"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-phone"
+                    <div class="flex gap-8">
+                        <div
+                            class="flex items-center mx-auto justify-center space-x-2"
                         >
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                            />
-                        </svg>
-                        <span class="text-sm flex justify-end"
-                            >093 / 070 / 077-88 00 67</span
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="19"
+                                height="19"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="#11ace3"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-phone"
+                            >
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                />
+                            </svg>
+                            <span class="text-sm">010 / 011 - 88 00 67</span>
+                        </div>
+                        <div
+                            class="flex space-x-2 md:hidden justify-center items-center"
                         >
+                            <img src="../img/facebook.png" class="w-5" />
+                            <img src="../img/play.png" class="w-8" />
+                            <img src="../img/telegram.png" class="w-5" />
+                            <img src="../img/phone-call.png" class="w-5" />
+                        </div>
                     </div>
 
-                    <!-- Strat Time -->
-                    <div class="flex justify-center items-center space-x-2">
+                    <div class="flex items-center justify-center space-x-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="19"
@@ -93,37 +202,15 @@
                             <polyline points="12 6 12 12 16 14" />
                         </svg>
                         <span class="text-sm"
-                            >Mon - Fir 6:00am - 9:00pm / Sat - Sun 8:00am -
+                            >Mon - Fri 6:00am - 9:00pm / Sat - Sun 8:00am -
                             8:00pm</span
                         >
                     </div>
                 </div>
 
+                <!-- Right Side - Social Media and Menu Button -->
                 <div class="flex items-center lg:order-2 gap-2">
-                    <div
-                        class="items-cente text-sm flex justify-between gap-2 w-full md:w-auto mr-6"
-                    >
-                        <span>Search</span>
-                        <button>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="lucide lucide-search h-full text-[#11ace3]"
-                            >
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="m21 21-4.3-4.3" />
-                            </svg>
-                        </button>
-                    </div>
-
-                    <div>
+                    <!-- <div>
                         <button
                             type="button"
                             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -148,26 +235,23 @@
                                 />
                             </svg>
                         </button>
-                    </div>
-                    <div class="flex space-x-1 max-sm:hidden">
-                        <div>
-                            <img src="../img/facebook.png" class="w-5" />
-                        </div>
-                        <div>
-                            <img src="../img/youtube.png" class="w-5" />
-                        </div>
-                        <div>
-                            <img src="../img/telegram.png" class="w-5" />
-                        </div>
-                        <div>
-                            <img src="../img/phone-call.png" class="w-5" />
-                        </div>
+                    </div> -->
+
+                    <!-- Social Media Icons (Hidden on Small Screens) -->
+                    <div
+                        class="hidden md:flex space-x-4 justify-center items-center"
+                    >
+                        <img src="../img/facebook.png" class="w-5" />
+                        <img src="../img/play.png" class="w-8" />
+                        <img src="../img/telegram.png" class="w-5" />
+                        <img src="../img/phone-call.png" class="w-5" />
                     </div>
                 </div>
             </div>
         </nav>
+
         <!-- Start Drawer -->
-        <div
+        <!-- <div
             id="drawer-navigation"
             class="fixed top-0 left-0 z-50 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800"
             tabindex="-1"
@@ -226,7 +310,6 @@
                             <span class="ms-3">HOME</span>
                         </a>
                     </li>
-
                     <li>
                         <a
                             href="#"
@@ -246,128 +329,66 @@
                                     d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
                                 />
                             </svg>
-                            <span class="ms-3">WHY REPEAT GYM</span>
+                            <span class="ms-3">PROJECTS</span>
                         </a>
                     </li>
-                    <li>
-                        <a
-                            href="services.html"
-                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                        >
-                            <svg
-                                class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 22 21"
-                            >
-                                <path
-                                    d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"
-                                />
-                                <path
-                                    d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
-                                />
-                            </svg>
-                            <span class="ms-3">sERVICES</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="testimonials.html"
-                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                        >
-                            <svg
-                                class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 22 21"
-                            >
-                                <path
-                                    d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"
-                                />
-                                <path
-                                    d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
-                                />
-                            </svg>
-                            <span class="ms-3">TESTIMONIALS</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="contactUs.html"
-                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                        >
-                            <svg
-                                class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 22 21"
-                            >
-                                <path
-                                    d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"
-                                />
-                                <path
-                                    d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
-                                />
-                            </svg>
-                            <span class="ms-3">CONTACT US</span>
-                        </a>
-                    </li>
-                </ul>
+                    <!-- Add more items here as necessary -->
+        <!-- </ul>
             </div>
-        </div>
+        </div> -->
         <!-- End Drawer -->
+        <!-- End Navbar -->
 
         <!-- Strat hero -->
         <div class="mt-28 flex flex-col justify-center items-center">
+            <!-- Logo Section -->
             <div>
                 <img
                     src="../img/logo/LOGO For Facebook Profile 02.png"
                     class="w-28"
                 />
             </div>
-            <div class="text-white">
-                <div class="container mx-auto">
-                    <ul class="flex justify-center py-4 font-medium">
-                        <li class="">
-                            <a href="index.html" class="text-blue-500 px-3"
-                                >HOME</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="whyRepeatGym.html"
-                                class="text-white hover:text-blue-500 border-l border-gray-100 px-3"
-                                >WHY REPEAT GYM</a
-                            >
-                        </li>
-                        <li class="">
-                            <a
-                                href="services.html"
-                                class="text-white hover:text-blue-500 border-l border-gray-100 px-3"
-                                >SERVICES</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="testimonials.html"
-                                class="text-white hover:text-blue-500 border-l border-gray-100 px-3"
-                                >TESTIMONIALS</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="contactUs.html"
-                                class="text-white hover:text-blue-500 border-l border-gray-100 px-3"
-                                >CONTACT US</a
-                            >
-                        </li>
-                    </ul>
-                </div>
+
+            <!-- Navigation Menu -->
+            <div class="mt-4 md:mt-0">
+                <ul
+                    class="flex flex-wrap justify-center space-x-4 gap-y-3 text-sm font-medium"
+                >
+                    <li>
+                        <a href="index.html" class="text-blue-500 pl-2">HOME</a>
+                    </li>
+                    <li class="">
+                        <a
+                            href="whyRepeatGym.html"
+                            class="text-white hover:text-blue-500 border-l pl-2"
+                            >WHY REPEAT GYM</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="services.html"
+                            class="text-white hover:text-blue-500 border-l pl-2"
+                            >OUR SERVICES</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="testimonials.html"
+                            class="text-white hover:text-blue-500 border-l pl-2"
+                            >TESTIMONIALS</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="contactUs.html"
+                            class="text-white hover:text-blue-500 border-l pl-2"
+                            >CONTACT US</a
+                        >
+                    </li>
+                </ul>
             </div>
         </div>
+
         <!-- End hero -->
 
         <!-- Strat transform -->
@@ -384,6 +405,7 @@
                     data-carousel-item
                     style="
                         background-image: url('../img/thumbnail\ VDO\ result\ customer\ 02.jpg');
+                        clip-path: polygon(0 0, 99% 0, 100% 90%, 0 73%);
                     "
                 >
                     <!-- Dark Overlay -->
@@ -396,17 +418,17 @@
                         class="relative z-10 flex flex-col items-center justify-center text-center text-white px-4"
                     >
                         <h1
-                            class="text-3xl md:text-3xl lg:text-4xl font-bold text-[#11ace3] uppercase"
+                            class="text-3xl md:text-6xl font-costum5 text-[#11ace3] uppercase"
                         >
                             Transform
                         </h1>
                         <p
-                            class="mt-2 text-lg md:text-3xl lg:text-4xl font-bold uppercase"
+                            class="mt-2 text-2xl md:text-6xl lg:text-6xl font-costum5 uppercase"
                         >
                             Your Body
                         </p>
                         <p
-                            class="mt-2 text-lg md:text-3xl lg:text-4xl font-bold text-[#11ace3] uppercase"
+                            class="mt-2 text-2xl md:text-5xl font-costum5 text-[#11ace3] uppercase"
                         >
                             With Us
                         </p>
@@ -414,95 +436,8 @@
                             <button class="font-bold px-10 border-t-2"></button>
                         </div>
                         <a
-                            href="#"
-                            class="px-8 py-2 gradient-bg text-white font-bold text-lg rounded-full transition duration-300"
-                        >
-                            Join Us Now!
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div
-                    class="flex items-center justify-center h-full bg-cover bg-center duration-700 ease-in-out"
-                    data-carousel-item
-                    style="
-                        background-image: url('../img/logo/IMG_2452-Enhanced-NR.jpg');
-                    "
-                >
-                    <!-- Dark Overlay -->
-                    <div
-                        class="absolute inset-0 bg-[#151516a6] bg-opacity-80"
-                    ></div>
-
-                    <!-- Content -->
-                    <div
-                        class="relative z-10 flex flex-col items-center justify-center text-center text-white px-4"
-                    >
-                        <h1
-                            class="text-3xl md:text-3xl lg:text-4xl font-bold text-[#11ace3] uppercase"
-                        >
-                            Transform
-                        </h1>
-                        <p
-                            class="mt-2 text-lg md:text-3xl lg:text-4xl font-bold uppercase"
-                        >
-                            Your Body
-                        </p>
-                        <p
-                            class="mt-2 text-lg md:text-3xl lg:text-4xl font-bold text-[#11ace3] uppercase"
-                        >
-                            With Us
-                        </p>
-                        <div class="flex items-center justify-center py-2">
-                            <button class="font-bold px-10 border-t-2"></button>
-                        </div>
-                        <a
-                            href="#"
-                            class="px-8 py-4 gradient-bg text-white font-bold text-lg rounded-full transition duration-300"
-                        >
-                            Join Us Now!
-                        </a>
-                    </div>
-                </div>
-                <!-- Item 3 -->
-                <div
-                    class="flex items-center justify-center h-full bg-cover bg-center duration-700 ease-in-out"
-                    data-carousel-item
-                    style="
-                        background-image: url('../img/thumbnail\ VDO\ result\ customer\ 02.jpg');
-                    "
-                >
-                    <!-- Dark Overlay -->
-                    <div
-                        class="absolute inset-0 bg-[#151516a6] bg-opacity-80"
-                    ></div>
-
-                    <!-- Content -->
-                    <div
-                        class="relative z-10 flex flex-col items-center justify-center text-center text-white px-4"
-                    >
-                        <h1
-                            class="text-3xl md:text-3xl lg:text-4xl font-bold text-[#11ace3] uppercase"
-                        >
-                            Transform
-                        </h1>
-                        <p
-                            class="mt-2 text-lg md:text-3xl lg:text-4xl font-bold uppercase"
-                        >
-                            Your Body
-                        </p>
-                        <p
-                            class="mt-2 text-lg md:text-3xl lg:text-4xl font-bold text-[#11ace3] uppercase"
-                        >
-                            With Us
-                        </p>
-                        <div class="flex items-center justify-center py-2">
-                            <button class="font-bold px-10 border-t-2"></button>
-                        </div>
-                        <a
-                            href="#"
-                            class="px-8 py-4 gradient-bg text-white font-bold text-lg rounded-full transition duration-300"
+                            href="/contactUs.html"
+                            class="px-8 py-2 gradient-bg text-white font-costum4 uppercase text-lg rounded-full transition duration-300"
                         >
                             Join Us Now!
                         </a>
@@ -568,12 +503,16 @@
         <!-- strat middle -->
         <div>
             <div
-                class="flex flex-col justify-center items-center text-4xl font-bold mt-16"
+                class="flex mx-5 flex-col justify-center items-center text-4xl font-bold"
             >
-                <h1 class="uppercase text-[#11ace3]">
-                    REPEAT GYM HAS THE MOST COACHES IN CAMBODIA,
+                <h1 class="uppercase text-[#11ace3] font-costum3">
+                    REPEAT GYM HAS THE MOST
+                    <span class="p-2 bg-[#11abe326] text-[#ffffff] rounded-xl"
+                        >COACHES</span
+                    >
+                    IN CAMBODIA,
                 </h1>
-                <p class="uppercase text-2xl">
+                <p class="uppercase text-2xl font-costum3 mt-3">
                     OFFERING YOU THE BEST SUPPORT AND GUIDANCE
                 </p>
             </div>
@@ -585,7 +524,7 @@
             <div class="max-w-screen-xl mx-auto">
                 <div class="p-4 bg-[#2b2b2e] rounded-2xl">
                     <img
-                        class="rounded-2xl"
+                        class="rounded-2xl aspect-video object-cover h-[400px] w-full"
                         src="../img/thumbnail vdo sale client chhay.jpg"
                     />
                 </div>
@@ -594,85 +533,79 @@
         <!-- End middle -->
 
         <!-- Strat Section -->
-        <section class="py-8 antialiased dark:bg-gray-900 md:py-12 mt-20">
-            <div class="mx-auto max-w-screen-xl 2xl:px-0">
-                <!-- Heading & Filters -->
+        <section class="py-8 antialiased md:py-12">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                 <div
-                    class="mb-4 sm:mx-auto place-items-center grid gap-10 sm:grid-cols-1 md:mb-8 lg:grid-cols-3"
+                    class="space-y-8 md:grid md:grid-cols-2 mx-auto lg:grid-cols-3 md:gap-12 md:space-y-0"
                 >
-                    <!-- Item 1 -->
                     <div
-                        class="transform hover:scale-105 mx-auto w-full transition duration-300 max-w-sm p-4 bg-[#0b0b0c] text-white hover:border hover:border-[#11ace3]"
+                        class="bg-black p-4 hover:border w-96 hover:border-[#11ace3] transform hover:scale-105 mx-auto transition duration-300"
                     >
                         <img
                             class="aspect-square object-cover"
                             src="../img/IMG_2435-Enhanced-NR.jpg"
                             alt="Image description"
                         />
-                        <div class="p-5 text-center">
+                        <div class="text-center">
                             <a href="#">
                                 <h5
-                                    class="mb-2 text-2xl font-bold tracking-tight text-[#11ace3] underline underline-offset-8 uppercase"
+                                    class="my-4 text-2xl font-bold tracking-tight text-[#11ace3] uppercase"
                                 >
                                     RESULT
                                 </h5>
                             </a>
                             <p
-                                class="mt-8 mb-3 line-clamp-2 uppercase dark:text-gray-400"
+                                class="mb-8 uppercase dark:text-gray-400 text-sm"
                             >
-                                Here are the biggest enterprise technology
-                                acquisitions of 2021
+                                ACHIEVING REAL FITNESS RESULTS ACHIEVING REAL
+                                FITNESS RESULTS
                             </p>
                         </div>
                     </div>
-
-                    <!-- Item 2 -->
                     <div
-                        class="transform hover:scale-105 mx-auto w-full transition duration-300 max-w-sm p-4 bg-[#0b0b0c] text-white hover:border hover:border-[#11ace3]"
+                        class="bg-black p-4 hover:border w-96 hover:border-[#11ace3] transform hover:scale-105 mx-auto transition duration-300"
                     >
                         <img
                             class="aspect-square object-cover"
                             src="../img/IMG_2435-Enhanced-NR.jpg"
                             alt="Image description"
                         />
-                        <div class="p-5 text-center">
+                        <div class="text-center">
                             <a href="#">
                                 <h5
-                                    class="mb-2 text-2xl font-bold tracking-tight text-[#11ace3] underline underline-offset-8 uppercase"
+                                    class="my-4 text-2xl font-bold tracking-tight text-[#11ace3] uppercase"
                                 >
-                                    RESULT
+                                    Service
                                 </h5>
                             </a>
                             <p
-                                class="mt-8 mb-3 line-clamp-2 uppercase dark:text-gray-400"
+                                class="mb-8 uppercase dark:text-gray-400 text-sm"
                             >
-                                Here are the biggest enterprise technology
-                                acquisitions of 2021
+                                PROVIDING EXCEPTIONAL CUSTOMER SERVICE
                             </p>
                         </div>
                     </div>
-                    <!-- Item 3 -->
                     <div
-                        class="transform hover:scale-105 mx-auto w-full transition duration-300 max-w-sm p-4 bg-[#0b0b0c] text-white hover:border hover:border-[#11ace3]"
+                        class="bg-black p-4 hover:border w-96 hover:border-[#11ace3] transform hover:scale-105 mx-auto transition duration-300"
                     >
                         <img
                             class="aspect-square object-cover"
                             src="../img/IMG_2435-Enhanced-NR.jpg"
                             alt="Image description"
                         />
-                        <div class="p-5 text-center">
+                        <div class="text-center">
                             <a href="#">
                                 <h5
-                                    class="mb-2 text-2xl font-bold tracking-tight text-[#11ace3] underline underline-offset-8 uppercase"
+                                    class="my-4 text-2xl font-bold tracking-tight text-[#11ace3] uppercase"
                                 >
-                                    RESULT
+                                    Hygiene
                                 </h5>
                             </a>
                             <p
-                                class="mt-8 mb-3 line-clamp-2 uppercase dark:text-gray-400"
+                                class="mb-8 uppercase dark:text-gray-400 text-sm"
                             >
-                                Here are the biggest enterprise technology
-                                acquisitions of 2021
+                                WE KEEP OUR GYM SANITIZED AND SAFE, PRIORITIZING
+                                MEMBERS' HEALTH.
                             </p>
                         </div>
                     </div>
@@ -683,135 +616,294 @@
         <!--End Section  -->
 
         <!-- Strat section -->
-        <section class="mt-20 w-full bg-[#0b0b0c] flex p-20">
+        <section
+            class="mt-20 w-full flex p-20 bg-black relative"
+            style="
+                clip-path: polygon(0 0, 99% 0, 100% 90%, 0 100%);
+                overflow: hidden;
+            "
+        >
+            <!-- <div
+                class="absolute inset-0 border border-gray-800"
+                style="
+                    background-image: url('../img/Contact\ us.jpg');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                "
+            ></div> -->
             <div
-                class="max-w-screen-xl mx-auto flex items-center justify-center space-x-10 cursor-pointer text-center"
+                class="relative hidden max-w-screen-xl mx-auto md:flex items-center justify-center space-x-10 cursor-pointer text-center"
             >
                 <div
-                    class="p-3 rounded-xl bg-[#151516] hover:scale-105 transition duration-300"
+                    class="p-3 rounded-xl bg-[#151516] hover:scale-105 transition duration-300 hover:border-[#11ace3] hover:border opacity-90 hover:opacity-100"
                 >
                     <img
                         src="../img/IMG_2439-Enhanced-NR.jpg"
                         class="w-[260px] rounded-xl"
                     />
                     <p
-                        class="uppercase text-[#11ace3] text-2xl font-medium mt-2"
+                        class="uppercase text-[#11ace3] text-lg font-medium mt-2"
                     >
-                        group tranning
+                        group training
                     </p>
                 </div>
                 <div
-                    class="p-3 rounded-xl bg-[#151516] border border-[#11ace3] scale-110 transition duration-300"
+                    class="p-3 rounded-xl bg-[#151516] scale-100 hover:scale-105 transition duration-300 hover:border-[#11ace3] hover:border opacity-90 hover:opacity-100"
                 >
                     <img
                         src="../img/IMG_2452-Enhanced-NR.jpg"
                         class="w-[260px] rounded-xl"
                     />
                     <p
-                        class="uppercase text-[#11ace3] text-2xl font-medium mt-2"
+                        class="uppercase text-[#11ace3] text-lg font-medium mt-2"
                     >
-                        team tranning
+                        team training
                     </p>
                 </div>
                 <div
-                    class="p-3 rounded-xl bg-[#151516] hover:scale-105 transition duration-300"
+                    class="p-3 rounded-xl bg-[#151516] hover:scale-105 transition duration-300 hover:border-[#11ace3] hover:border opacity-90 hover:opacity-100"
                 >
                     <img
                         src="../img/IMG_2439-Enhanced-NR.jpg"
                         class="w-[260px] rounded-xl"
                     />
                     <p
-                        class="uppercase text-[#11ace3] text-2xl font-medium mt-2"
+                        class="uppercase text-[#11ace3] text-lg font-medium mt-2"
                     >
-                        pertional tranning
+                        personal training
                     </p>
                 </div>
             </div>
+
+            <!--max-medium-->
+            <div
+                class="max-w-7xl w-[300px] md:hidden mx-auto grid grid-cols-12 gap-5 mt-3 my-10"
+            >
+                <div
+                    class="col-span-12 lg:col-span-4 border rounded-md overflow-hidden hover:border-[#11ace3]"
+                >
+                    <div
+                        class="w-full p-3 rounded-xl bg-[#151516] scale-100 transition duration-300 opacity-90 hover:opacity-100"
+                    >
+                        <img
+                            src="../img/IMG_2452-Enhanced-NR.jpg"
+                            class="rounded-xl"
+                        />
+                        <p
+                            class="uppercase text-[#11ace3] text-center text-lg font-medium mt-2"
+                        >
+                            team training
+                        </p>
+                    </div>
+                </div>
+                <div class="grid gap-5 col-span-12 lg:col-span-8">
+                    <a
+                        href="#"
+                        class="flex items-center hover:border-[#11ace3] bg-white border border-gray-200 rounded-lg shadow flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-[110px] lg:h-[160px] overflow-hidden"
+                    >
+                        <img
+                            class="object-cover h-full aspect-square"
+                            src="../img/IMG_2435-Enhanced-NR.jpg"
+                            alt=""
+                        />
+                        <div
+                            class="flex flex-col justify-between p-4 leading-normal"
+                        >
+                            <div>
+                                <p
+                                    class="uppercase text-[#11ace3] text-lg font-medium mt-2"
+                                >
+                                    group training
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="flex items-center hover:border-[#11ace3] bg-white border border-gray-200 rounded-lg shadow flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-[110px] lg:h-[160px] overflow-hidden"
+                    >
+                        <img
+                            class="object-cover h-full aspect-square"
+                            src="../img/IMG_2439-Enhanced-NR.jpg"
+                            alt=""
+                        />
+                        <div
+                            class="flex flex-col justify-between p-4 leading-normal"
+                        >
+                            <div>
+                                <p
+                                    class="uppercase text-[#11ace3] text-lg font-medium mt-2"
+                                >
+                                    personal training
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </section>
+
         <!-- End section -->
 
         <!-- Start Foolter -->
+
         <footer class="bg-[#0b0b0c] mt-20 p-8">
-            <div
-                class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-            >
+            <div class="max-w-screen-xl mx-auto p-4">
                 <div
-                    href="#"
-                    class="flex items-center space-x-3 rtl:space-x-reverse"
+                    class="flex flex-col md:flex-row md:justify-between items-start md:space-y-0"
                 >
-                    <!--Start number phone -->
-                    <div class="flex items-center justify-center space-x-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="#11ace3"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-phone"
-                        >
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                            />
-                        </svg>
-                        <span class="text-lg flex justify-end"
-                            >093 / 070 / 077-88 00 67</span
-                        >
+                    <div
+                        class="flex items-center space-x-3 rtl:space-x-reverse"
+                    >
+                        <div class="space-y-3">
+                            <!-- Phone Number -->
+                            <div class="flex items-center space-x-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="#11ace3"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-phone"
+                                >
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                    />
+                                </svg>
+                                <span class="text-lg"
+                                    >010 / 011 - 88 00 67</span
+                                >
+                            </div>
+                            <!-- Email -->
+                            <div class="flex items-center space-x-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="#11ace3"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-mail"
+                                >
+                                    <rect
+                                        width="20"
+                                        height="16"
+                                        x="2"
+                                        y="4"
+                                        rx="2"
+                                    />
+                                    <path
+                                        d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                                    />
+                                </svg>
+                                <span class="text-[17px] font-costum9"
+                                    >info@repeatgyme.com</span
+                                >
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Strat Time -->
-                    <div
-                        class="flex justify-center items-center space-x-2"
-                    ></div>
-                </div>
-
-                <div class="flex items-center lg:order-2 gap-2">
-                    <div
-                        class="items-cente text-sm flex justify-between gap-2 w-full md:w-auto mr-6"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="#11ace3"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-clock"
-                        >
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                        <span class="text-lg"
-                            >Mon - Fir 6:00am - 9:00pm / Sat - Sun 8:00am -
-                            8:00pm</span
-                        >
+                    <!-- Business Hours and Social Media -->
+                    <div class="flex flex-col items-center md:items-end mt-3">
+                        <div class="flex items-center text-sm space-x-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="#11ace3"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-clock"
+                            >
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <span class="text-lg"
+                                >Mon - Fri 6:00am - 9:00pm / Sat - Sun 8:00am -
+                                8:00pm</span
+                            >
+                        </div>
+                        <div class="flex space-x-4 justify-center items-center">
+                            <div>
+                                <img src="../img/facebook.png" class="w-9" />
+                            </div>
+                            <div>
+                                <img src="../img/play.png" class="w-14" />
+                            </div>
+                            <div>
+                                <img src="../img/telegram.png" class="w-9" />
+                            </div>
+                            <div>
+                                <img src="../img/phone-call.png" class="w-9" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <hr class="my-3 border-gray-700 sm:mx-auto lg:my-6" />
+
             <div
-                class="space-x-5 max-w-screen-xl mx-auto flex items-center cursor-pointer p-5"
+                class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center text-white"
             >
-                <div>
-                    <img src="../img/facebook.png" class="w-9" />
+                <div class="text-center md:text-left">
+                    <span class="text-sm font-costum9"
+                        >Copyright © 2024 Repeat Gym. All Rights Reserved.</span
+                    >
                 </div>
-                <div>
-                    <img src="../img/youtube.png" class="w-9" />
-                </div>
-                <div>
-                    <img src="../img/telegram.png" class="w-9" />
-                </div>
-                <div>
-                    <img src="../img/phone-call.png" class="w-9" />
+                <div class="mt-4 md:mt-0">
+                    <ul
+                        class="flex flex-wrap justify-center space-x-4 gap-y-3 text-sm font-medium"
+                    >
+                        <li>
+                            <a href="index.html" class="text-blue-500 px-2"
+                                >HOME</a
+                            >
+                        </li>
+                        <li class="">
+                            <a
+                                href="whyRepeatGym.html"
+                                class="text-white hover:text-blue-500 border-l pl-2"
+                                >WHY REPEAT GYM</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="services.html"
+                                class="text-white hover:text-blue-500 border-l pl-2"
+                                >OUR SERVICES</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="testimonials.html"
+                                class="text-white hover:text-blue-500 border-l pl-2"
+                                >TESTIMONIALS</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="contactUs.html"
+                                class="text-white hover:text-blue-500 border-l pl-2"
+                                >CONTACT US</a
+                            >
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>
+
         <!-- End Foolter -->
     </body>
 </html>

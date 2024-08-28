@@ -15,10 +15,72 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Moul&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Siemreap&family=Koulen&display=swap"
             rel="stylesheet"
         />
         <style>
+            @font-face {
+                font-family: "Costum1";
+                src: url("/font/raleway-5/Raleway-Black.ttf") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum2";
+                src: url("/font/raleway-5/Raleway-BlackItalic.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum3";
+                src: url("/font/raleway-5/Raleway-Bold.ttf") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum4";
+                src: url("/font/raleway-5/Raleway-Medium.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum5";
+                src: url("/font/raleway-5/Raleway-ExtraBold.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum6";
+                src: url("/font/raleway-5/Raleway-ExtraBoldItalic.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum7";
+                src: url("/font/raleway-5/Raleway-ExtraLight.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum8";
+                src: url("/font/raleway-5/Raleway-SemiBold.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Costum9";
+                src: url("/font/raleway-5/Raleway-Italic.ttf")
+                    format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+
             .light-color-gradient {
                 position: relative;
                 background-color: #f5f6f7;
@@ -33,16 +95,55 @@
                         rgba(239, 152, 207, 0) 36%
                     );
             }
+
             .gradient-bg {
                 background: linear-gradient(to right, #06b6d4, #3b82f6);
             }
+
             .shadow-custom {
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
                     0 2px 4px rgba(0, 0, 0, 0.06);
             }
         </style>
+
+        <script>
+            tailwind.config = {
+                darkMode: "class", // Enables dark mode based on class
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: "#da373d",
+                            primary: "#15803d",
+                            warning: "#fab105",
+                            warningHover: "#ffb915",
+                        },
+                    },
+                    fontFamily: {
+                        koluen: ["Koulen"],
+                        costum1: ["Costum1", "sans-serif"],
+                        costum2: ["Costum2", "sans-serif"],
+                        costum3: ["Costum3", "sans-serif"],
+                        costum4: ["Costum4", "sans-serif"],
+                        costum5: ["Costum5", "sans-serif"],
+                        costum6: ["Costum6", "sans-serif"],
+                        costum7: ["Costum7", "sans-serif"],
+                        costum8: ["Costum8", "sans-serif"],
+                        costum9: ["Costum9", "sans-serif"],
+                    },
+                },
+            };
+        </script>
     </head>
-    <body class="bg-[#151516] text-white">
+    <body
+        class="bg-[#151516] text-white"
+        style="
+            background-image: url(../img/TESTIMONIALS.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-position-x: center;
+        "
+    >
         <!-- Start Navbar -->
         <nav class="bg-[#0b0b0c] text-white fixed w-full z-40 top-0 start-0">
             <div
@@ -71,7 +172,7 @@
                             />
                         </svg>
                         <span class="text-sm flex justify-end"
-                            >093 / 070 / 077-88 00 67</span
+                            >010 / 011 - 88 00 67</span
                         >
                     </div>
 
@@ -100,29 +201,6 @@
                 </div>
 
                 <div class="flex items-center lg:order-2 gap-2">
-                    <div
-                        class="items-cente text-sm flex justify-between gap-2 w-full md:w-auto mr-6"
-                    >
-                        <span>Search</span>
-                        <button>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="lucide lucide-search h-full text-[#11ace3]"
-                            >
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="m21 21-4.3-4.3" />
-                            </svg>
-                        </button>
-                    </div>
-
                     <div>
                         <button
                             type="button"
@@ -149,12 +227,16 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="flex space-x-1 max-sm:hidden">
+
+                    <!-- Start Socail -->
+                    <div
+                        class="flex space-x-4 max-sm:hidden justify-center items-center"
+                    >
                         <div>
                             <img src="../img/facebook.png" class="w-5" />
                         </div>
                         <div>
-                            <img src="../img/youtube.png" class="w-5" />
+                            <img src="../img/play.png" class="w-8" />
                         </div>
                         <div>
                             <img src="../img/telegram.png" class="w-5" />
@@ -163,6 +245,7 @@
                             <img src="../img/phone-call.png" class="w-5" />
                         </div>
                     </div>
+                    <!-- End Socail -->
                 </div>
             </div>
         </nav>
@@ -328,46 +411,46 @@
                     class="w-28"
                 />
             </div>
-            <div class="text-white">
-                <div class="container mx-auto">
-                    <ul class="flex justify-center py-4 font-medium">
-                        <li class="">
-                            <a
-                                href="index.html"
-                                class="hover:text-blue-500 px-3"
-                                >HOME</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="whyRepeatGym.html"
-                                class="text-white hover:text-blue-500 border-l border-gray-100 px-3"
-                                >WHY REPEAT GYM</a
-                            >
-                        </li>
-                        <li class="">
-                            <a
-                                href="services.html"
-                                class="hover:text-blue-500 border-l border-gray-100 px-3"
-                                >SERVICES</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="testimonials.html"
-                                class="text-blue-500 border-l border-gray-100 px-3"
-                                >TESTIMONIALS</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="contactUs.html"
-                                class="text-white hover:text-blue-500 border-l border-gray-100 px-3"
-                                >CONTACT US</a
-                            >
-                        </li>
-                    </ul>
-                </div>
+            <div class="mt-4 md:mt-0">
+                <ul
+                    class="flex flex-wrap justify-center space-x-4 gap-y-3 text-sm font-medium"
+                >
+                    <li>
+                        <a
+                            href="index.html"
+                            class="text-white hover:text-blue-500 pl-2"
+                            >HOME</a
+                        >
+                    </li>
+                    <li class="">
+                        <a
+                            href="whyRepeatGym.html"
+                            class="text-white hover:text-blue-500 border-l pl-2"
+                            >WHY REPEAT GYM</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="services.html"
+                            class="text-white hover:text-blue-500 border-l pl-2"
+                            >OUR SERVICES</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="testimonials.html"
+                            class="text-blue-500 border-l pl-2"
+                            >TESTIMONIALS</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="contactUs.html"
+                            class="text-white hover:text-blue-500 border-l pl-2"
+                            >CONTACT US</a
+                        >
+                    </li>
+                </ul>
             </div>
         </div>
         <!-- End hero -->
@@ -401,48 +484,96 @@
         <!--End Image with CTA button  -->
 
         <!-- strat uor locations -->
-        <section class="bg-[#0b0b0c] mt-28 py-20">
-            <div
-                class="max-w-screen-xl mx-auto gap-8 px-10 grid lg:grid-cols-3 justify-center items-center"
-            >
-                <!-- Item 1 -->
-                <div
-                    class="p-4 cursor-pointer transform transition-transform duration-300 hover:scale-105 bg-[#11abe31b] rounded-lg overflow-hidden"
-                >
-                    <img
-                        src="../img/logo/IMG_2435-Enhanced-NR.jpg"
-                        class="w-full rounded-lg"
-                    />
+        <section
+            class="bg-[#0b0b0c] my-40 py-20"
+            ​
+            style="
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-position-x: center;
+            "
+        >
+            <div>
+                <div class="text-center flex justify-center -mt-28 my-12">
+                    <p
+                        class="text-3xl bg-[#11abe323] p-4 px-10 text-[#11ace3] rounded-xl font-koluen"
+                    >
+                        កម្មវីធីប្រកួតសម្រក​គីឡូ នៅក្លឹបហាត់ប្រាណ រីភីត
+                    </p>
                 </div>
-                <!-- Item 2 -->
                 <div
-                    class="p-4 cursor-pointer transform transition-transform duration-300 hover:scale-105 bg-[#11abe31b] rounded-lg overflow-hidden"
+                    class="max-w-screen-xl mx-auto gap-10 px-10 grid lg:grid-cols-3 justify-center items-center"
                 >
-                    <img
-                        src="../img/logo/IMG_2439-Enhanced-NR.jpg"
-                        class="w-full rounded-lg"
-                    />
-                </div>
-                <!-- Item 3 -->
-                <div
-                    class="p-4 cursor-pointer transform transition-transform duration-300 hover:scale-105 bg-[#11abe31b] rounded-lg overflow-hidden"
-                >
-                    <img
-                        src="../img/logo/IMG_2452-Enhanced-NR.jpg"
-                        class="w-full rounded-lg"
-                    />
+                    <!-- Item 1 -->
+                    <div
+                        class="p-4 cursor-pointer transform transition-transform duration-300 hover:scale-105 bg-[#11abe31b] rounded-lg overflow-hidden hover:border hover:border-[#4fd0ff] hover:duration-300 hover:transition hover:cursor-pointer hover:opacity-100 opacity-60"
+                    >
+                        <img
+                            src="../img/logo/IMG_2435-Enhanced-NR.jpg"
+                            class="w-full rounded-lg"
+                        />
+                        <div class="text-center font-koluen space-y-3 mt-4">
+                            <p class="my-6">អបអរសាទរ</p>
+                            <p​ class="text-3xl text-[#11ace3]"
+                                >ប្អូនស្រី​ ចាន់លីមាន</p​
+                            >
+                            <p class="max-w-60 mx-auto">
+                                ស្រកគីឡូច្រើនជាងគេក្នុងការប្រគួតសម្រកគីឡូ
+                            </p>
+                            <p class="text-yellow-500">ចំណាប់ថ្នាក់លេខ​1</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                        class="p-4 cursor-pointer transform transition-transform duration-300 hover:scale-105 bg-[#11abe31b] rounded-lg overflow-hidden hover:border hover:border-[#4fd0ff] hover:duration-300 hover:transition hover:cursor-pointer"
+                    >
+                        <img
+                            src="../img/logo/IMG_2439-Enhanced-NR.jpg"
+                            class="w-full rounded-lg"
+                        />
+                        <div class="text-center font-koluen space-y-3 mt-4">
+                            <p class="my-6">អបអរសាទរ</p>
+                            <p​ class="text-3xl text-[#11ace3]"
+                                >ប្អូនស្រី​ ចាន់លីមាន</p​
+                            >
+                            <p class="max-w-60 mx-auto">
+                                ស្រកគីឡូច្រើនជាងគេក្នុងការប្រគួតសម្រកគីឡូ
+                            </p>
+                            <p class="text-yellow-500">ចំណាប់ថ្នាក់លេខ​1</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div
+                        class="p-4 cursor-pointer transform transition-transform duration-300 hover:scale-105 bg-[#11abe31b] rounded-lg overflow-hidden hover:border hover:border-[#4fd0ff] hover:duration-300 hover:transition hover:cursor-pointer hover:opacity-100 opacity-60"
+                    >
+                        <img
+                            src="../img/logo/IMG_2452-Enhanced-NR.jpg"
+                            class="w-full rounded-lg"
+                        />
+                        <div class="text-center font-koluen space-y-3 mt-4">
+                            <p class="my-6">អបអរសាទរ</p>
+                            <p​ class="text-3xl text-[#11ace3]"
+                                >ប្អូនស្រី​ ចាន់លីមាន</p​
+                            >
+                            <p class="max-w-60 mx-auto">
+                                ស្រកគីឡូច្រើនជាងគេក្នុងការប្រគួតសម្រកគីឡូ
+                            </p>
+                            <p class="text-yellow-500">ចំណាប់ថ្នាក់លេខ​1</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- End uor locations -->
 
         <!-- Strat video play -->
-        <section class="bg-[#0b0b0c] mt-28 py-20">
+        <section class="mt20 mb-8 py-20">
             <div class="grid max-w-screen-xl mx-auto grid-cols-2">
                 <!-- video 1 -->
                 <div class="p-4 grid gap-8 rounded-lg overflow-hidden">
                     <div
-                        class="cursor-pointer transform transition-transform duration-300 hover:scale-105"
+                        class="cursor-pointer transform transition-transform hover:border-2 hover:border-[#4fd0ff] hover:scale-105 hover:duration-300 hover:transition duration-300 hover:cursor-pointer"
                     >
                         <img
                             class="w-full aspect-video h-[300px]"
@@ -451,7 +582,7 @@
                         />
                     </div>
                     <div
-                        class="cursor-pointer transform transition-transform duration-300 hover:scale-105"
+                        class="cursor-pointer transform transition-transform hover:border-2 hover:border-[#4fd0ff] hover:scale-105 hover:duration-300 hover:transition duration-300 hover:cursor-pointer"
                     >
                         <img
                             class="w-full aspect-video h-[300px]"
@@ -463,7 +594,7 @@
                 <!-- video2 -->
                 <div class="flex mx-auto p-4 items-center justify-center">
                     <div
-                        class="cursor-pointer transform transition-transform duration-300 hover:scale-105"
+                        class="cursor-pointer transform transition-transform hover:border-2 hover:border-[#4fd0ff] hover:scale-105 hover:duration-300 hover:transition duration-300 hover:cursor-pointer"
                     >
                         <img
                             class="w-full h-[500px] aspect-square object-cover"
@@ -474,87 +605,173 @@
                 </div>
             </div>
         </section>
-        <!-- End video play -->
 
-        <!-- Start Foolter -->
-        <footer class="bg-[#0b0b0c] mt-28 p-8">
-            <div
-                class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        <!-- End video play -->
+        <!-- Start Join Now -->
+        <section class="text-center uppercase">
+            <a
+                href="./contactUs.html"
+                class="px-8 py-3 gradient-bg text-white font-bold text-lg rounded-full transition duration-300"
             >
+                Join Us Now!
+            </a>
+        </section>
+        <!-- End Join Now -->
+        <!-- Start Foolter -->
+        <footer class="bg-[#0b0b0c] mt-20 p-8">
+            <div class="max-w-screen-xl mx-auto p-4">
                 <div
-                    href="#"
-                    class="flex items-center space-x-3 rtl:space-x-reverse"
+                    class="flex flex-col md:flex-row md:justify-between items-start md:space-y-0"
                 >
-                    <!--Start number phone -->
-                    <div class="flex items-center justify-center space-x-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="#11ace3"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-phone"
-                        >
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                            />
-                        </svg>
-                        <span class="text-lg flex justify-end"
-                            >093 / 070 / 077-88 00 67</span
-                        >
+                    <div
+                        class="flex items-center space-x-3 rtl:space-x-reverse"
+                    >
+                        <div class="space-y-3">
+                            <!-- Phone Number -->
+                            <div class="flex items-center space-x-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="#11ace3"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-phone"
+                                >
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                    />
+                                </svg>
+                                <span class="text-lg"
+                                    >010 / 011 - 88 00 67</span
+                                >
+                            </div>
+                            <!-- Email -->
+                            <div class="flex items-center space-x-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="#11ace3"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-mail"
+                                >
+                                    <rect
+                                        width="20"
+                                        height="16"
+                                        x="2"
+                                        y="4"
+                                        rx="2"
+                                    />
+                                    <path
+                                        d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                                    />
+                                </svg>
+                                <span class="text-[17px] font-costum9"
+                                    >info@repeatgyme.com</span
+                                >
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Strat Time -->
-                    <div
-                        class="flex justify-center items-center space-x-2"
-                    ></div>
-                </div>
-
-                <div class="flex items-center lg:order-2 gap-2">
-                    <div
-                        class="items-cente text-sm flex justify-between gap-2 w-full md:w-auto mr-6"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="#11ace3"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-clock"
-                        >
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                        <span class="text-lg"
-                            >Mon - Fir 6:00am - 9:00pm / Sat - Sun 8:00am -
-                            8:00pm</span
-                        >
+                    <!-- Business Hours and Social Media -->
+                    <div class="flex flex-col items-center md:items-end mt-3">
+                        <div class="flex items-center text-sm space-x-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="#11ace3"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-clock"
+                            >
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <span class="text-lg"
+                                >Mon - Fri 6:00am - 9:00pm / Sat - Sun 8:00am -
+                                8:00pm</span
+                            >
+                        </div>
+                        <div class="flex space-x-4 justify-center items-center">
+                            <div>
+                                <img src="../img/facebook.png" class="w-9" />
+                            </div>
+                            <div>
+                                <img src="../img/play.png" class="w-14" />
+                            </div>
+                            <div>
+                                <img src="../img/telegram.png" class="w-9" />
+                            </div>
+                            <div>
+                                <img src="../img/phone-call.png" class="w-9" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <hr class="my-3 border-gray-700 sm:mx-auto lg:my-6" />
+
             <div
-                class="space-x-5 max-w-screen-xl mx-auto flex items-center cursor-pointer p-5"
+                class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center text-white"
             >
-                <div>
-                    <img src="../img/facebook.png" class="w-9" />
+                <div class="text-center md:text-left">
+                    <span class="text-sm font-costum9"
+                        >Copyright © 2024 Repeat Gym. All Rights Reserved.</span
+                    >
                 </div>
-                <div>
-                    <img src="../img/youtube.png" class="w-9" />
-                </div>
-                <div>
-                    <img src="../img/telegram.png" class="w-9" />
-                </div>
-                <div>
-                    <img src="../img/phone-call.png" class="w-9" />
+                <div class="mt-4 md:mt-0">
+                    <ul
+                        class="flex flex-wrap justify-center space-x-4 gap-y-3 text-sm font-medium"
+                    >
+                        <li>
+                            <a
+                                href="index.html"
+                                class="text-white hover:text-blue-500 px-2"
+                                >HOME</a
+                            >
+                        </li>
+                        <li class="">
+                            <a
+                                href="whyRepeatGym.html"
+                                class="text-white hover:text-blue-500 border-l pl-2"
+                                >WHY REPEAT GYM</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="services.html"
+                                class="text-white hover:text-blue-500 border-l pl-2"
+                                >OUR SERVICES</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="testimonials.html"
+                                class="text-blue-500 border-l pl-2"
+                                >TESTIMONIALS</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="contactUs.html"
+                                class="text-white hover:text-blue-500 border-l pl-2"
+                                >CONTACT US</a
+                            >
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>

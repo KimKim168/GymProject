@@ -183,13 +183,13 @@
     </head>
     <body
         style="
-            background-image: url('../img/logo/Background\ Home\ Page.jpg');
+            background-image: url('../img/Home Page.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-position-x: center;
         "
-        class="text-white bg-[#151515]"
+        class="text-white"
     >
         <!-- Start Navbar -->
         <nav class="bg-[#0b0b0c] text-white fixed w-full z-40 top-0 start-0">
@@ -442,7 +442,7 @@
         <div
             id="controls-carousel"
             class="relative w-full mt-4"
-            style="clip-path: polygon(0 0, 100% 0, 100% 90%, 0 73%)"
+            data-carousel="static"
         >
             <!-- Carousel wrapper -->
             <div class="relative h-[500px] overflow-hidden rounded-lg">
@@ -456,14 +456,15 @@
                     centered-slides="true"
                     autoplay-delay="3000"
                     autoplay-disable-on-interaction="false"
+                    style="clip-path: polygon(0 0, 100% 0, 100% 90%, 0 73%)"
                 >
                     <!-- slide 1 -->
                     <swiper-slide>
                         <div
-                            class="flex items-center justify-center h-full w-full bg-cover bg-center bg-blend-multiply"
+                            class="flex items-center justify-center h-full bg-cover bg-center bg-blend-multiply"
                             data-carousel-item
                             style="
-                                background-image: url(../img/logo/1.slide.jpg);
+                                background-image: url(./img/logo/1.slide.jpg);
                             "
                         >
                             <!-- Dark Overlay -->
@@ -509,10 +510,10 @@
                     <!-- slide 2 -->
                     <swiper-slide>
                         <div
-                            class="flex items-center justify-center h-full w-full bg-cover bg-center bg-blend-multiply"
+                            class="flex items-center justify-center h-full bg-cover bg-center bg-blend-multiply"
                             data-carousel-item
                             style="
-                                background-image: url(../img/logo/2.slide.jpg);
+                                background-image: url(./img/logo/2.slide.jpg);
                             "
                         >
                             <!-- Dark Overlay -->
@@ -555,62 +556,39 @@
                             </div>
                         </div>
                     </swiper-slide>
-                    <!-- slide 3 -->
-                    <swiper-slide>
-                        <div
-                            class="flex items-center justify-center h-full w-full bg-cover bg-center bg-blend-multiply"
-                            data-carousel-item
-                            style="
-                                background-image: url(../img/logo/3.slide.jpg);
-                            "
-                        >
-                            <!-- Dark Overlay -->
-                            <div
-                                class="absolute inset-0 bg-[#151516a6] bg-opacity-80"
-                            ></div>
 
-                            <!-- Content -->
-                            <div
-                                class="relative z-10 flex flex-col items-center justify-center text-center text-white px-4"
-                            >
-                                <h1
-                                    class="text-3xl md:text-6xl font-costum5 text-[#11ace3] uppercase"
-                                >
-                                    Transform
-                                </h1>
-                                <p
-                                    class="mt-2 text-2xl md:text-6xl lg:text-6xl font-costum5 uppercase"
-                                >
-                                    Your Body
-                                </p>
-                                <p
-                                    class="mt-2 text-2xl md:text-5xl font-costum5 text-[#11ace3] uppercase"
-                                >
-                                    With Us
-                                </p>
-                                <div
-                                    class="flex items-center justify-center py-3"
-                                >
-                                    <button
-                                        class="font-bold px-10 border-t-2"
-                                    ></button>
-                                </div>
-                                <a
-                                    href="/contactUs.html"
-                                    class="px-8 py-2 gradient-bg text-white font-costum4 uppercase text-lg rounded-full transition duration-300"
-                                >
-                                    Join Us Now!
-                                </a>
-                            </div>
-                        </div>
-                    </swiper-slide>
+                    <div class="autoplay-progress" slot="container-end">
+                        <svg viewBox="0 0 48 48">
+                            <circle cx="24" cy="24" r="20"></circle>
+                        </svg>
+                        <span></span>
+                    </div>
                 </swiper-container>
 
                 <!-- Swiper JS -->
-                <script
-                    defer
-                    src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
-                ></script>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    const progressCircle = document.querySelector(
+                        ".autoplay-progress svg"
+                    );
+                    const progressContent = document.querySelector(
+                        ".autoplay-progress span"
+                    );
+
+                    const swiperEl = document.querySelector("swiper-container");
+                    swiperEl.addEventListener("autoplaytimeleft", (e) => {
+                        const [swiper, time, progress] = e.detail;
+                        progressCircle.style.setProperty(
+                            "--progress",
+                            1 - progress
+                        );
+                        progressContent.textContent = `${Math.ceil(
+                            time / 1000
+                        )}s`;
+                    });
+                </script>
             </div>
         </div>
         <!-- End transform -->
@@ -642,7 +620,7 @@
                 <div class="p-4 bg-[#2b2b2e] rounded-2xl">
                     <img
                         class="rounded-2xl aspect-video object-cover h-[400px] w-full"
-                        src="../img/logo/4.all coach.jpg"
+                        src="../img/thumbnail vdo sale client chhay.jpg"
                     />
                 </div>
                 <img
@@ -724,380 +702,6 @@
         </div>
         <!-- End middle -->
 
-        <!-- Strat Section -->
-        <section class="py-8 antialiased md:py-12 overflow-hidden">
-            <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                <div
-                    class="space-y-8 md:grid md:grid-cols-2 mx-auto lg:grid-cols-3 md:space-y-0"
-                >
-                    <div
-                        class="bg-black p-4 hover:border w-80 hover:border-[#11ace3] transform hover:scale-110 mx-auto transition duration-1000"
-                    >
-                        <img
-                            class="aspect-square object-cover"
-                            src="../img/logo/5.Result.jpg"
-                            alt="Image description"
-                        />
-                        <div class="text-center">
-                            <a href="#">
-                                <h5
-                                    class="my-4 text-2xl font-bold tracking-tight text-[#11ace3] uppercase"
-                                >
-                                    RESULT
-                                </h5>
-                            </a>
-                            <p
-                                class="mb-8 uppercase dark:text-gray-400 text-sm"
-                            >
-                                ACHIEVING REAL FITNESS RESULTS
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-black p-4 hover:border w-80 hover:border-[#11ace3] transform hover:scale-110 mx-auto transition duration-1000"
-                    >
-                        <img
-                            class="aspect-square object-cover"
-                            src="../img/logo/6.Service.jpg"
-                            alt="Image description"
-                        />
-                        <div class="text-center">
-                            <a href="#">
-                                <h5
-                                    class="my-4 text-2xl font-bold tracking-tight text-[#11ace3] uppercase"
-                                >
-                                    Service
-                                </h5>
-                            </a>
-                            <p
-                                class="mb-8 uppercase dark:text-gray-400 text-sm"
-                            >
-                                PROVIDING EXCEPTIONAL CUSTOMER SERVICE
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-black p-4 hover:border w-80 hover:border-[#11ace3] transform hover:scale-110 mx-auto transition duration-1000"
-                    >
-                        <img
-                            class="aspect-square object-cover"
-                            src="../img/logo/7.HYGIENE.jpg"
-                            alt="Image description"
-                        />
-                        <div class="text-center">
-                            <a href="#">
-                                <h5
-                                    class="my-4 text-2xl font-bold tracking-tight text-[#11ace3] uppercase"
-                                >
-                                    Hygiene
-                                </h5>
-                            </a>
-                            <p
-                                class="mb-8 uppercase dark:text-gray-400 text-sm"
-                            >
-                                WE KEEP OUR GYM SANITIZED AND SAFE, PRIORITIZING
-                                MEMBERS' HEALTH.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--End Section  -->
-
-        <!-- Strat section -->
-        <section
-            class="mt-20 w-full flex p-20 bg-black relative"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            style="
-                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-                overflow: hidden;
-            "
-        >
-            <!-- <div
-                class="absolute inset-0 border border-gray-800"
-                style="
-                    background-image: url('../img/Contact\ us.jpg');
-                    background-size: cover;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                "
-            ></div> -->
-            <div
-                class="relative hidden max-w-screen-xl p-8 mx-auto md:flex items-center justify-center space-x-10 cursor-pointer text-center overflow-hidden"
-            >
-                <div
-                    class="p-3 rounded-xl bg-[#151516] hover:scale-105 transition duration-300 hover:border-[#11ace3] hover:border opacity-60 hover:opacity-100"
-                >
-                    <img
-                        src="../img/logo/8.GROUP TRAINING0.jpg"
-                        class="w-[400px] h-[400px] object-cover rounded-xl"
-                    />
-                    <p
-                        class="uppercase text-[#11ace3] text-lg font-medium mt-2"
-                    >
-                        group training
-                    </p>
-                </div>
-                <div
-                    class="p-3 rounded-xl bg-[#151516] scale-100 hover:scale-105 transition duration-300 hover:border-[#11ace3] hover:border opacity-60 hover:opacity-100"
-                >
-                    <img
-                        src="../img/logo/10.TEAM TRAINING.jpg"
-                        class="w-[400px] h-[400px] object-cover rounded-xl"
-                    />
-                    <p
-                        class="uppercase text-[#11ace3] text-lg font-medium mt-2"
-                    >
-                        team training
-                    </p>
-                </div>
-                <div
-                    class="p-3 rounded-xl bg-[#151516] hover:scale-105 transition duration-300 hover:border-[#11ace3] hover:border opacity-60 hover:opacity-100"
-                >
-                    <img
-                        src="../img/logo/9.PERSONAL TRAINING.jpg"
-                        class="w-[400px] h-[400px] object-cover rounded-xl"
-                    />
-                    <p
-                        class="uppercase text-[#11ace3] text-lg font-medium mt-2"
-                    >
-                        personal training
-                    </p>
-                </div>
-            </div>
-
-            <!--max-mediu-->
-            <div
-                class="max-w-7xl w-[300px] md:hidden mx-auto grid grid-cols-12 gap-5 mt-3 my-10"
-            >
-                <div
-                    class="col-span-12 lg:col-span-4 border rounded-md overflow-hidden hover:border-[#11ace3]"
-                >
-                    <div
-                        class="w-full p-3 rounded-xl bg-[#151516] scale-100 transition duration-300 opacity-90 hover:opacity-100"
-                    >
-                        <img
-                            src="../img/IMG_2452-Enhanced-NR.jpg"
-                            class="rounded-xl"
-                        />
-                        <p
-                            class="uppercase text-[#11ace3] text-center text-lg font-medium mt-2"
-                        >
-                            team training
-                        </p>
-                    </div>
-                </div>
-                <div class="grid gap-5 col-span-12 lg:col-span-8">
-                    <a
-                        href="#"
-                        class="flex items-center hover:border-[#11ace3] bg-white border border-gray-200 rounded-lg shadow flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-[110px] lg:h-[160px] overflow-hidden"
-                    >
-                        <img
-                            class="object-cover h-full aspect-square"
-                            src="../img/IMG_2435-Enhanced-NR.jpg"
-                            alt=""
-                        />
-                        <div
-                            class="flex flex-col justify-between p-4 leading-normal"
-                        >
-                            <div>
-                                <p
-                                    class="uppercase text-[#11ace3] text-lg font-medium mt-2"
-                                >
-                                    group training
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a
-                        href="#"
-                        class="flex items-center hover:border-[#11ace3] bg-white border border-gray-200 rounded-lg shadow flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-[110px] lg:h-[160px] overflow-hidden"
-                    >
-                        <img
-                            class="object-cover h-full aspect-square"
-                            src="../img/IMG_2439-Enhanced-NR.jpg"
-                            alt=""
-                        />
-                        <div
-                            class="flex flex-col justify-between p-4 leading-normal"
-                        >
-                            <div>
-                                <p
-                                    class="uppercase text-[#11ace3] text-lg font-medium mt-2"
-                                >
-                                    personal training
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- End section -->
-
-        <!-- Start Foolter -->
-
-        <footer class="bg-[#0b0b0c] mt-20 p-8">
-            <div class="max-w-screen-xl mx-auto p-4">
-                <div
-                    class="flex flex-col md:flex-row md:justify-between items-start md:space-y-0"
-                >
-                    <div
-                        class="flex items-center space-x-3 rtl:space-x-reverse"
-                    >
-                        <div class="space-y-3">
-                            <!-- Phone Number -->
-                            <div class="flex items-center space-x-2">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="#11ace3"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-phone"
-                                >
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                                    />
-                                </svg>
-                                <span class="text-lg"
-                                    >010 / 011 - 88 00 67</span
-                                >
-                            </div>
-                            <!-- Email -->
-                            <div class="flex items-center space-x-2">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="#11ace3"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-mail"
-                                >
-                                    <rect
-                                        width="20"
-                                        height="16"
-                                        x="2"
-                                        y="4"
-                                        rx="2"
-                                    />
-                                    <path
-                                        d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
-                                    />
-                                </svg>
-                                <span class="text-[17px] font-costum9"
-                                    >info@repeatgyme.com</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Business Hours and Social Media -->
-                    <div class="flex flex-col items-center md:items-end mt-3">
-                        <div class="flex items-center text-sm space-x-2">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="#11ace3"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="lucide lucide-clock"
-                            >
-                                <circle cx="12" cy="12" r="10" />
-                                <polyline points="12 6 12 12 16 14" />
-                            </svg>
-                            <span class="text-lg"
-                                >Mon - Fri 6:00am - 9:00pm / Sat - Sun 8:00am -
-                                8:00pm</span
-                            >
-                        </div>
-                        <div class="flex space-x-4 justify-center items-center">
-                            <div>
-                                <img src="../img/facebook.png" class="w-9" />
-                            </div>
-                            <div>
-                                <img src="../img/play.png" class="w-14" />
-                            </div>
-                            <div>
-                                <img src="../img/telegram.png" class="w-9" />
-                            </div>
-                            <div>
-                                <img src="../img/phone-call.png" class="w-9" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="my-3 border-gray-700 sm:mx-auto lg:my-6" />
-
-            <div
-                class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center text-white"
-            >
-                <div class="text-center md:text-left">
-                    <span class="text-sm font-costum9"
-                        >Copyright © 2024 Repeat Gym. All Rights Reserved.</span
-                    >
-                </div>
-                <div class="mt-4 md:mt-0">
-                    <ul
-                        class="flex flex-wrap justify-center space-x-4 gap-y-3 text-sm font-medium"
-                    >
-                        <li>
-                            <a href="index.html" class="text-blue-500 px-2"
-                                >HOME</a
-                            >
-                        </li>
-                        <li class="">
-                            <a
-                                href="whyRepeatGym.html"
-                                class="text-white hover:text-blue-500 border-l pl-2"
-                                >WHY REPEAT GYM</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="services.html"
-                                class="text-white hover:text-blue-500 border-l pl-2"
-                                >OUR SERVICES</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="testimonials.html"
-                                class="text-white hover:text-blue-500 border-l pl-2"
-                                >TESTIMONIALS</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="contactUs.html"
-                                class="text-white hover:text-blue-500 border-l pl-2"
-                                >CONTACT US</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-
-        <!-- End Foolter -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     </body>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

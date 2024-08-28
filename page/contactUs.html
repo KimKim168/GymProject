@@ -18,6 +18,10 @@
             href="https://fonts.googleapis.com/css2?family=Moul&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Siemreap&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
         <style>
             @font-face {
                 font-family: "Costum1";
@@ -456,66 +460,8 @@
         <!-- End hero -->
 
         <!--strat image with contant -->
-        <section
-            class="w-full pt-10 mt-10 bg-center bg-gray-700 bg-blend-multiply"
-            style="
-                background-image: url('../img/logo/thumbnail\ vdo\ sale\ client\ chhay.jpg');
-            "
-        >
-            <div
-                class="p-10 grid grid-cols-2 justify-center items-center px-4 mx-auto max-w-screen-xl lg:px-6"
-            >
-                <div class="mt-8 flex justify-center items-center space-x-6">
-                    <div class="text-center">
-                        <h2
-                            class="text-3xl font-costum8 text-[#ffffff] uppercase"
-                        >
-                            Juin us Now
-                        </h2>
-                        <p
-                            class="mb-6 text-2xl font-costum4 text-[#11ace3] md:text-2xl"
-                        >
-                            To Receive Up To
-                        </p>
-                    </div>
-                    <div class="text-center flex justify-center items-center">
-                        <h2
-                            class="text-[190px] font-montserrat font-[900] text-[#ffffff] uppercase"
-                        >
-                            50
-                        </h2>
-                        <p
-                            class="text-xl font-costum8 bg-black text-[#11ace3] -ml-8 gap-2 p-1"
-                        >
-                            <span
-                                class="font-montserrat font-[900] text-[#ffffff]"
-                                >%</span
-                            >
-                            Discount
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="relative border-t-[12px] border-r-[12px] border-b-[12px] border-l-[12px] border-[#11ace3]/60 w-96 aspect-square mx-auto"
-                >
-                    <!-- First Image -->
-                    <div class="absolute top-5 -left-10">
-                        <img
-                            class="w-[250px] aspect-square object-cover"
-                            src="../img/IMG_2435-Enhanced-NR.jpg"
-                            alt="Trainer assisting woman with leg press"
-                        />
-                    </div>
-                    <!-- Second Image -->
-                    <div class="absolute bottom-5 -right-32">
-                        <img
-                            class="w-[250px] aspect-square object-cover"
-                            src="../img/IMG_2439-Enhanced-NR.jpg"
-                            alt="Trainer helping man with squat"
-                        />
-                    </div>
-                </div>
-            </div>
+        <section class="pt-10 mt-10">
+            <img src="../img/contactUs/dicc50.jpg" class="w-full" />
         </section>
         <!--end image with contant -->
 
@@ -680,15 +626,22 @@
             <div
                 class="max-w-screen-xl mx-auto gap-16 grid grid-cols-1 md:grid-cols-2"
             >
-                <div class="relative col-span-1 h-[300px] text-white mt-10">
-                    <div
+                <div
+                    class="relative col-span-1 h-[300px] text-white mt-10 cursor-pointer"
+                    data-aos="fade-right"
+                    data-aos-offset="200"
+                    data-aos-easing="ease-in-sine"
+                >
+                    <a
                         class="rounded-md absolute top-0 w-full h-full overflow-hidden"
+                        target="_blank"
+                        href="https://www.google.com/maps/@11.553483,104.89841,389m/data=!3m1!1e3?entry=ttu"
                     >
                         <img
                             src="../img/Screenshot 2024-08-14 091629.png"
                             class="opacity-30 aspect-video w-full h-full object-cover rounded-xl"
                         />
-                    </div>
+                    </a>
                     <div
                         class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
                     >
@@ -765,15 +718,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative col-span-1 h-[300px] text-white mt-10">
-                    <div
+                <div
+                    class="relative col-span-1 h-[300px] text-white mt-10 cursor-pointer"
+                >
+                    <a
+                        data-aos="fade-left"
+                        data-aos-offset="200"
+                        data-aos-easing="ease-in-sine"
                         class="rounded-md absolute top-0 w-full h-full overflow-hidden"
+                        href="https://www.google.com/maps/@11.553483,104.89841,389m/data=!3m1!1e3?entry=ttu"
+                        target="_blank"
                     >
                         <img
                             src="../img/Screenshot 2024-08-14 091629.png"
                             class="opacity-30 aspect-video w-full h-full object-cover rounded-xl"
                         />
-                    </div>
+                    </a>
                     <div
                         class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
                     >
@@ -1013,5 +973,10 @@
             </div>
         </footer>
         <!-- End Foolter -->
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
